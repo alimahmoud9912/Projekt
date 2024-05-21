@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Välkommen till naturtillgångar</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/css/main.css">
+    <link rel="stylesheet" href="Projekt.css">
+</head>
+<body>
+    <div id="mapDiv"></div>
+    <div id="sidebar">
+        <ul>
+            <li><img src="data.bilder/info_icon.png" alt="Info" onclick="toggleFilter('info')"></li>
+            <li><img src="data.bilder/food_icon.png" alt="Food" onclick="toggleFilter('food')"></li>
+            <li><img src="data.bilder/rest_icon.png" alt="Rest" onclick="toggleFilter('rest')"></li>
+            <li><img src="data.bilder/hiking_icon.png" alt="Hiking" onclick="toggleFilter('hiking')"></li>
+            <li><img src="data.bilder/cycling_icon.png" alt="Cycling" onclick="toggleFilter('cycling')"></li>
+            <li><img src="data.bilder/canoeing_icon.png" alt="Canoeing" onclick="toggleFilter('canoeing')"></li>
+        </ul>
+    </div>
+    <div id="categoryForm" class="hidden">
+        <label for="categoryName">Kategorinamn:</label>
+        <input type="text" id="categoryName">
+        <button onclick="addCategory()">Lägg till kategori</button>
+    </div>
+    <div id="filterForm" class="hidden">
+        <button onclick="toggleFilter('canoeing')">Visa/Göm kanotleder</button>
+        <button onclick="toggleFilter('cycling')">Visa/Göm cykelleder</button>
+        <button onclick="toggleFilter('hiking')">Visa/Göm vandringsleder</button>
+        <button onclick="toggleFilter('poi')">Visa/Göm POI</button>
+        <label for="distanceFilter">Filtrera POI inom avstånd (meter):</label>
+        <input type="number" id="distanceFilter" name="distanceFilter" min="0" value="0">
+        <button onclick="filterPOIByDistance()">Filtrera</button>
+    </div>
+    <script src="https://js.arcgis.com/4.24/"></script>
+    <script src="Projekt.js"></script>
+</body>
+</html>

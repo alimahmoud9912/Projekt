@@ -1,0 +1,63 @@
+html, body, #mapDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#mapDiv {
+  width: 85%;
+  height: 100%;
+  float: left;
+}
+
+#sidebar {
+  width: 15%;
+  height: 100%;
+  float: right;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#sidebar li {
+  padding: 10px;
+  text-align: center;
+}
+
+#sidebar img {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.poi-info {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.poi-info img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
