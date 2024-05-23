@@ -185,10 +185,8 @@ require([
     alert("Ny kategori: " + categoryName + " tillagd!");
   });
 
-  document.getElementById("toggleFilterButton").addEventListener("click", function() {
-    var filterType = document.getElementById("filterType").value;
-    // Hantera filtrering av kategorier och POI
-    console.log("Filtrering för typ: " + filterType);
+  document.getElementById("filterPOIButton").addEventListener("click", function() {
+    filterPOIByDistance();
   });
 
   var poiData = [
@@ -258,4 +256,3 @@ require([
   processPOIData(poiData);
   processTrailsData(trailsData);
 });
-
